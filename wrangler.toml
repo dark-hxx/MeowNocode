@@ -2,7 +2,6 @@
 name = "meow-app" # 此处数据库名称改为你需要的名称，否则 wrangler d1 create xxx会报错
 main = "worker.js"
 compatibility_date = "2025-11-07"
-assets = { directory = "./build" }
 
 # D1 数据库绑定
 [[d1_databases]]
@@ -21,8 +20,7 @@ ENVIRONMENT = "staging"
 ENVIRONMENT = "development"
 
 # 静态站点配置（如果使用Cloudflare Pages）
-[site]
-bucket = "./build" # 构建输出目录
+assets = { directory = "./build" }
 
 # 自定义域名
 # [env.production]
